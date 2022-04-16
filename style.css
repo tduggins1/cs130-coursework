@@ -1,21 +1,41 @@
-/* You're welcome to change any of this! */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 header, section {
+    font-family: "Open Sans", sans-serif;
     padding: 20px;
+    min-height: 15vh;
 }
 p, li {
     line-height: 1.5em;
 }
 
+
+
+#tutorials {
+    background-color: #dced9b;
+    padding-bottom: 40px; 
+}
+
+#homework {
+    background-color: #BBCDE5;
+    padding-top: 40px;
+    padding-bottom: 40px; 
+}
+
+
 #inspiration {
-    background-color: #F0F0F0;
+    background-color: #639FAB;
     padding-top: 40px;
     padding-bottom: 40px;
 }
