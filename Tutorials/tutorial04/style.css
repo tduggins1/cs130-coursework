@@ -1,0 +1,101 @@
+.container {
+   display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-areas: 
+      "a . b b"
+      "c d e f"
+      "g g g f";
+
+   min-height: 100vh;
+   grid-row-gap: 10px;
+}
+
+.menu1 {
+   grid-area: a;
+   background-color: azure;
+   max-height: 100px;
+
+}
+
+.menu2 {
+   grid-area: b;
+   background-color: teal;
+   max-height: 100px;
+
+}
+
+.card1 {
+   grid-area: c;
+
+   background-color: brown;
+}
+
+.card2 {
+   grid-area: d;
+
+   background-color: brown;
+}
+
+.card3 {
+   grid-area: e;
+
+   background-color: brown;
+}
+
+.aside {
+   grid-area: f;
+   background-color: blueviolet;
+}
+
+.main {
+   grid-area: g;
+   background-color: yellowgreen;
+}
+
+
+
+
+@media (max-width: 1024px) {
+   .container {
+      display: grid;
+   grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+      grid-template-areas: 
+         "a b"
+         "f f"
+         "c d"
+         "e e"
+         "g g";
+   
+      min-height: 100vh;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+   }
+
+}
+
+@media (max-width: 600px) {
+   .container {
+      display: grid;
+   grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+      grid-template-areas: 
+         "a ."
+         "b b"
+         "c c"
+         "d d"
+         "e e"
+         "g g";
+   
+      min-height: 100vh;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+   }
+
+   .aside {
+      display: none;
+   }
+
+}
+
