@@ -30,7 +30,7 @@ const getTracks = (term) => {
       for (const track of tracks) {
         document.querySelector('#tracks').innerHTML += `
         <button class="track-item preview" data-preview-track="${track.preview_url}" onclick="handleTrackClick(event)" >
-        <img src="${track.album.image_url}" alt="Track Artwork.">
+        <img src="${track.album.image_url}" alt="${track.name}">
         <i class="fas play-track fa-play" aria-hidden="true"></i>
         <div class="label">
             <h2>${track.name}</h2>
@@ -74,7 +74,7 @@ const getAlbums = (term) => {
         document.querySelector('#albums').innerHTML += `
         <section class="album-card" id="2lATw9ZAVp7ILQcOKPCPqp">
                         <div>
-                            <img src="${album.image_url}" alt="Album Art">
+                            <img src="${album.image_url}" alt="${album.name}">
                             <h2>${album.name}</h2>
                             <div class="footer">
                                 <a href="https://open.spotify.com/album/2lATw9ZAVp7ILQcOKPCPqp" target="_blank">
@@ -117,7 +117,7 @@ const artist2Html = (artist) => {
   return `
     <section class="artist-card" id=${artist.id}>
         <div>
-            <img src=${artist.image_url} alt="Artist Photo">
+            <img src=${artist.image_url} alt="${artist.name}">
             <h2>${artist.name}</h2>
             <div class="footer">
                 <a href=${artist.spotify_url} target="_blank">
