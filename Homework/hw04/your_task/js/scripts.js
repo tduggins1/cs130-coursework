@@ -77,7 +77,7 @@ const getAlbums = (term) => {
                             <img src="${album.image_url}" alt="${album.name}">
                             <h2>${album.name}</h2>
                             <div class="footer">
-                                <a href="https://open.spotify.com/album/2lATw9ZAVp7ILQcOKPCPqp" target="_blank">
+                                <a href="${album.spotify_url}" target="_blank">
                                     view on spotify
                                 </a>
                             </div>
