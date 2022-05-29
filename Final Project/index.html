@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- stylesheets and metadata go here -->
-        <title>Meal Planner</title>       
-        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+        crossorigin="anonymous"> />
+
+        <link rel="stylesheet" href="style.css"> />
+
+        
+
     </head>
-    <body>
-        <!-- HTML content tags go here -->
 
-<!--         
-        <nav class="navbar">
-            <strong>Dietary Restrictions</strong>
-            <a href="music.html">Music</a>
-            <a href="videos.html">Videos</a>
-        </nav> -->
+    <div class="container">
+        <div class="row text-center">
+            <h3>
+                Feeling hungry?
+            </h3>
+            <h5>Get a random meal by clicking below</h5>
+        </div>
+        <div id="meal" class="row meal"></div>
+    </div>
 
 
-        <main>
-            <h1>Dietary Restrictions</h1>
-            <p>What kind of diet would you like to create?</p>
+        <head>
+             <title>Meal Planner</title>
 
-            <aside>
-    
-                <label for="calories">Calories:</label>
-                <input type="text" id="calories" value="0" />
-    
-                <label for="diet">Diet:</label>
-                <select id="diet">
-                    <option value="standard">Standard</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="keto">Keto</option>
-                </select>
-    
-            </aside>
 
-            <script src="scripts.js"></script>
+             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://wallpaperforu.com/wp-content/uploads/2021/04/Wallpaper-Food-Still-Life-Wooden-Surface-2048x1342px-1023.jpg" class="d-block w-100" alt="Food Assortment">
+                  </div>
+                </div>
+              </div>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="search_function('chicken')" >Standard</button>
+            <button type="button" class="btn btn-primary" onclick="search_function('vegetarian')">Vegetarian</button>
+            <button type="button" class="btn btn-primary" onclick="search_function('vegan')">Vegan</button>
+            <button type="button" class="btn btn-primary" onclick="search_function('keto')">Keto</button>
+          </div>
+          <div id="content"></div>
     </body>
+
+    <script src="scripts.js"></script>
 </html>
