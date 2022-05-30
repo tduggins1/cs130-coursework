@@ -26,42 +26,34 @@ const return_data = (data) => {
     
     document.querySelector("#content").innerHTML = `
 
-        <div class="card col-3 offset-1" style="width: 18rem;">
-        <img src="${results.hits[x].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">${results.hits[x].recipe.label}</h5>
-        <p class="card-text">Calories: ${results.hits[x].recipe.calories}</p>
-        <a href="${results.hits[x].recipe.url}" class="btn btn-primary">Recipe</a>
-        </div>
-    </div>
-
-
-        <div class="card" style="width: 18rem;">
-        <img src="${results.hits[y].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">${results.hits[y].recipe.label}</h5>
-        <p class="card-text">Calories: ${results.hits[y].recipe.calories}</p>
-        <a href="${results.hits[y].recipe.url}" class="btn btn-primary">Recipe</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-    <img src="${results.hits[z].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
+    <div class="card-group">
+  <div class="card">
+    <img src="${results.hits[x].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
     <div class="card-body">
+      <h5 class="card-title">${results.hits[x].recipe.label}</h5>
+      <p class="card-text">Calories: ${results.hits[x].recipe.calories}</p>
+      <a href="${results.hits[x].recipe.url}" class="btn btn-primary">Recipe</a>
+    </div>
+  </div>
+  <div class="card">
+  <img src="${results.hits[y].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${results.hits[y].recipe.label}</h5>
+    <p class="card-text">Calories: ${results.hits[y].recipe.calories}</p>
+    <a href="${results.hits[y].recipe.url}" class="btn btn-primary">Recipe</a>
+    </div>
+  </div>
+  <div class="card">
+  <img src="${results.hits[z].recipe.images.REGULAR.url}" class="card-img-top" alt="...">
+  <div class="card-body">
     <h5 class="card-title">${results.hits[z].recipe.label}</h5>
     <p class="card-text">Calories: ${results.hits[z].recipe.calories}</p>
     <a href="${results.hits[z].recipe.url}" class="btn btn-primary">Recipe</a>
     </div>
-</div>
-    
-    
-    
+  </div>
+</div>    
     `
 
 
 
 }
-
-
-search_function('keto');
