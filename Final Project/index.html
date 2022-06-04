@@ -3,9 +3,9 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
         rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
-        crossorigin="anonymous"> />
+        crossorigin="anonymous"> </link>
 
-        <link rel="stylesheet" href="style.css"> />
+        <link rel="stylesheet" href="style.css"> </link>
 
         
 
@@ -13,18 +13,24 @@
 
     <div class="container">
         <div class="row text-center">
-            <h3>
-                Feeling hungry?
-            </h3>
-            <h5>Get a random meal by clicking below</h5>
+            <h5>Search for a food and click on a dietary restriction to generate recipies!</h5>
         </div>
         <div id="meal" class="row meal"></div>
     </div>
 
 
         <head>
-             <title>Meal Planner</title>
+          <div class="row text-center">
 
+             <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary" onclick="search_function('')" >Standard</button>
+              <button type="button" class="btn btn-primary" onclick="search_function('vegetarian')">Vegetarian</button>
+              <button type="button" class="btn btn-primary" onclick="search_function('vegan')">Vegan</button>
+              <button type="button" class="btn btn-primary" onclick="search_function('keto-friendly')">Keto</button>
+              
+            </div>
+            <input type="text" id="term" value="Search here!" />
+            <div id="content"></div>
 
              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -34,13 +40,7 @@
                 </div>
               </div>
 
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary" onclick="search_function('meal')" >Standard</button>
-            <button type="button" class="btn btn-primary" onclick="search_function('vegetarian')">Vegetarian</button>
-            <button type="button" class="btn btn-primary" onclick="search_function('vegan')">Vegan</button>
-            <button type="button" class="btn btn-primary" onclick="search_function('keto')">Keto</button>
-          </div>
-          <div id="content"></div>
+
     </body>
 
     <script src="scripts.js"></script>

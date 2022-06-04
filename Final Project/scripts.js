@@ -10,7 +10,12 @@ let results;
 
 
 const search_function = (tag) => {
-    fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + tag + '&app_id=0676e5c1&app_key=8397c2a14bde62e0f1d68fc1990cdddb')
+    const term = document.querySelector('#term').value;
+    let url = 'https://api.edamam.com/api/recipes/v2?type=public&q=' + term + '&app_id=0676e5c1&app_key=8397c2a14bde62e0f1d68fc1990cdddb';
+    if (tag != '') {
+      url += '&health=' + tag;
+    }
+    fetch(url)
         .then(response => {
             return response.json()
         })
